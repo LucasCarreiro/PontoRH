@@ -1,0 +1,40 @@
+Instale todas as dependências:
+
+bash
+Copy
+npm install
+Para Android, adicione estas linhas ao arquivo android/app/build.gradle:
+
+gradle
+Copy
+android {
+    defaultConfig {
+        // ...
+        missingDimensionStrategy 'react-native-camera', 'general'
+    }
+}
+Execute o servidor Flask (do arquivo teste_server.py) em outro terminal:
+
+bash
+Copy
+python teste_server.py
+Inicie o app React Native:
+
+bash
+Copy
+npx react-native run-android
+# ou
+npx react-native run-ios
+Esta estrutura mantém todas as funcionalidades do aplicativo original, incluindo:
+
+Autenticação de usuários com hash SHA-256
+
+Registro de pontos com horário
+
+Geolocalização e exibição de mapa
+
+Validações de formulário
+
+Navegação entre telas
+
+Persistência de dados com SQLite
